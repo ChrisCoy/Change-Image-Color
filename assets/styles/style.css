@@ -1,0 +1,98 @@
+* {
+  background: #221f1f;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.result {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.result img {
+  width: 40vw;
+  overflow-x: scroll;
+  background-image: url("../images/transparent-background.png");
+}
+
+.sendButton + input {
+  display: none;
+}
+
+label {
+  background-color: #398cf8;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  padding: 12px 40px;
+  transition: filter 0.2;
+}
+
+label:hover {
+  filter: brightness(0.8);
+}
+
+.input-image {
+  padding: 20px 20px 0;
+
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.titulo {
+  text-align: center;
+  font-family: sans-serif;
+  color: #fff;
+  font-size: 25px;
+}
+
+#color {
+  border: 2px solid #398cf8;
+  border-radius: 3%;
+  color: #fff;
+}
+
+.input-image div {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+@media (max-width: 720px) {
+  * {
+    overflow-y: scroll;
+  }
+
+  .input-image {
+    flex-direction: column;
+    display: flex;
+
+    align-items: center;
+    gap: 40px;
+  }
+
+  .result {
+    margin-top: 20px;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .result img {
+    display: block;
+    max-width: 350px;
+    max-height: 350px;
+    width: auto;
+    height: auto;
+  }
+}
